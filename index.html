@@ -24,11 +24,11 @@
       position: absolute;     
             top: 50%;   
             left: 50%;   
-            -webkit-transform: translate(-50%, -50%);   
-            -moz-transform: translate(-50%, -50%);   
+/*             -webkit-transform: translate(-50%, -50%);     
+            -moz-transform: translate(-50%, -50%);     
             -ms-transform: translate(-50%, -50%);     
             -o-transform: translate(-50%, -50%);   
-            transform: translate(-50%, -50%);   
+            transform: translate(-50%, -50%);    */
     }
     .namebox h1{
       margin: 0 auto;
@@ -37,11 +37,11 @@
 
 </head>
 <body>
-<canvas id="pinkboard"></canvas>
+<canvas id="pinkboard"></canvas>  
 <script>
   var settings = {
     particles: {
-      length: 500, // maximum amount of particles  
+      length: 500, // maximum amount of particles    
       duration: 2, // particle duration in sec  
       velocity: 100, // particle velocity in pixels/sec  
       effect: -0.75, // play with this for a nice effect  
@@ -66,7 +66,7 @@
       this.x = (typeof x !== 'undefined') ? x : 0;
       this.y = (typeof y !== 'undefined') ? y : 0;
     }
-    Point.prototype.clone = function() {
+    Point.prototype.clone = function() {  
       return new Point(this.x, this.y);
     };
     Point.prototype.length = function(length) {
@@ -105,7 +105,7 @@
     };
     Particle.prototype.update = function(deltaTime) {
       this.position.x += this.velocity.x * deltaTime;
-      this.position.y += this.velocity.y * deltaTime;
+      this.position.y += this.velocity.y * deltaTime;  
       this.velocity.x += this.acceleration.x * deltaTime;
       this.velocity.y += this.acceleration.y * deltaTime;
       this.age += deltaTime;
@@ -145,7 +145,7 @@
       if (firstActive == firstFree ) firstActive++;
       if (firstActive == particles.length) firstActive = 0;
     };
-    ParticlePool.prototype.update = function(deltaTime) {
+    ParticlePool.prototype.update = function(deltaTime) {  
       var i;
 // update active particles
       if (firstActive < firstFree) {
@@ -256,7 +256,7 @@
 // handle (re-)sizing of the canvas
     function onResize() {
       canvas.width = canvas.clientWidth;
-      canvas.height = canvas.clientHeight;
+      canvas.height = canvas.clientHeight;  
     }
     window.onresize = onResize;
 // delay rendering bootstrap
@@ -266,7 +266,7 @@
     }, 10);
   })(document.getElementById('pinkboard'));
 </script>
-<div class="namebox">  
+<div class="namebox">    
   <h1>⚡放⚡过⚡万⚡事⚡的⚡事⚡我⚡做⚡不⚡到⚡</h1>
 </div>
 </body>
