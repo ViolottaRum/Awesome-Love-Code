@@ -21,12 +21,12 @@
     }
     .namebox{
       color: #fff;
-      position: absolute;   
+      position: absolute;     
             top: 50%;   
             left: 50%;   
             -webkit-transform: translate(-50%, -50%);   
             -moz-transform: translate(-50%, -50%);   
-            -ms-transform: translate(-50%, -50%);   
+            -ms-transform: translate(-50%, -50%);     
             -o-transform: translate(-50%, -50%);   
             transform: translate(-50%, -50%);   
     }
@@ -41,10 +41,10 @@
 <script>
   var settings = {
     particles: {
-      length: 500, // maximum amount of particles
-      duration: 2, // particle duration in sec
-      velocity: 100, // particle velocity in pixels/sec
-      effect: -0.75, // play with this for a nice effect
+      length: 500, // maximum amount of particles  
+      duration: 2, // particle duration in sec  
+      velocity: 100, // particle velocity in pixels/sec  
+      effect: -0.75, // play with this for a nice effect  
       size: 30, // particle size in pixels
     },
   };
@@ -52,7 +52,7 @@
           function(){
             var b=0;
             var c=["ms","moz","webkit","o"];
-            for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){
+            for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){  
               window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];
               window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]
             }
@@ -267,7 +267,7 @@
   })(document.getElementById('pinkboard'));
 </script>
 <div class="namebox">  
-  <h1>⚡放过万事的事我做不到⚡</h1>
+  <h1>⚡放⚡过⚡万⚡事⚡的⚡事⚡我⚡做⚡不⚡到⚡</h1>
 </div>
 </body>
 </html>
